@@ -1,0 +1,108 @@
+body.page-jornades {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+/* Article general */
+.article {
+  container-type: inline-size;
+  padding-top: 4rem;
+}
+
+
+/* Seccions de l’article */
+.article-section {
+  margin-bottom: 2.5rem;
+}
+
+/* Pseudoclasse funcional :is() per agrupar titulars */
+.article :is(h2, h3) {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Intro de dues columnes en desktop */
+.article-section--intro .article-columns {
+    border-bottom: 1px solid rgb(0 0 0 / 6%);
+  display: grid;
+  gap: 1.5rem;
+}
+
+@container (min-width: 48rem) {
+  .article-section--intro .article-columns {
+    grid-template-columns: 1.1fr 1.1fr;
+  }
+}
+
+/* Llista del programa */
+.article-list {
+  display: grid;
+  gap: 0.8rem;
+  padding-left: 1.25rem;
+}
+
+.article-list li {
+  padding-left: 0.25rem;
+  position: relative;
+}
+
+/* Cita amb :has() conté un blockquote */
+.article-section--quote:has(blockquote) {
+  border-left: 4px solid $primary;
+  border-top: 1px solid rgb(0 0 0 / 6%);
+  margin-inline: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.article-section--quote blockquote {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Foto amb text a sota */
+.article-section--image-full {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.article-section--image-full .article-figure img {
+  border-radius: 1rem;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.article-section--image-full .article-figure figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  opacity: 0.75;
+  text-align: center;
+}
+
+/* Figure */
+.article-figure {
+  margin: 0;
+}
+
+.article-figure img {
+  border-radius: 1rem;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.article-figure figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+  opacity: 0.75;
+}
+
+/* Tancament */
+.article-section--closing {
+  border-top: 1px solid rgb(0 0 0 / 6%);
+  padding-top: 2rem;
+}

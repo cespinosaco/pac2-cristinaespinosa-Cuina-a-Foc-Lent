@@ -1,0 +1,43 @@
+.nav-logo {
+  display: block;
+  height: 50px;
+  width: auto;
+}
+
+/* ----- ESTILS NAVBAR LINK ----- */
+
+.navbar .nav-link {
+  color: $body-color;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+/* Línia base invisible amb before */
+.navbar .nav-link::before {
+  background-color: $primary; /* color de la línia */
+  bottom: 0.15rem;
+  content: "";
+  height: 2px;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+  width: 100%;
+}
+
+/* Hover: apareix la línia */
+.navbar .nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+/* Actiu: canviem el color del text */
+.navbar .nav-link.active,
+.navbar .nav-link[aria-current="page"] {
+  color: $primary;
+  font-weight: 600;
+}

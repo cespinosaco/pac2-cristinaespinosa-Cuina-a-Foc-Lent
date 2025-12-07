@@ -1,0 +1,56 @@
+/* ---------- COLORS PRINCIPALS ---------- */
+
+/* Gamma càlida */
+$color-primary: #b85c2a;// Taronja
+$color-secondary: #4d2b1b;// Marró fosc
+$color-accent: oklch(75% 0.12 60deg);// Accent modern
+
+/* Colors neutres */
+$color-bg: #fffaf3;// Beix suau
+$color-surface: #fff;
+$color-text: #222;// Text principal
+$color-muted: #666;// Text secundari
+
+/* Colors estat */
+$color-success: #4caf50;
+$color-warning: #ffb300;
+$color-danger: #d32f2f;
+
+
+/* ---------- COLORS PER A BOOTSTRAP ---------- */
+
+/* Reassignem per personalitzar components Bootstrap */
+
+$primary: $color-primary;
+$secondary: $color-secondary;
+$success: $color-success;
+$warning: $color-warning;
+$danger: $color-danger;
+$info: #4aa3df;
+
+/* Fons i text global */
+$body-bg: $color-bg;
+$body-color: $color-text;
+
+
+/* ---------- TIPOGRAFIES ---------- */
+
+$font-family-base: "Inter", system-ui, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+
+
+/* ---------- RADIUS I ESPAIS ---------- */
+$radius-base: 0.75rem;
+$radius-large: 1.25rem;
+$spacer: 1rem;
+
+
+/* ---------- OMBRES ---------- */
+$shadow-soft: 0 8px 24px rgb(0 0 0 / 8%);
+$shadow-card: 0 14px 40px rgb(0 0 0 / 10%);
+
+
+/* ---------- Z-INDEX ---------- */
+$z-hero-content: 10;
+$z-navbar: 1000;

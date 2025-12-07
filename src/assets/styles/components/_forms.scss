@@ -1,0 +1,57 @@
+/* ----- GENERAL FORMULARIS ----- */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.form-group--inline {
+  align-items: flex-start;
+}
+
+.form-label,
+legend.form-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-control {
+  background-color: #fff;
+  border: 1px solid rgb(0 0 0 / 12%);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  padding: 0.6rem 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: $primary;
+  box-shadow: 0 0 0 3px color-mix(in srgb, $primary 35%, transparent);
+  outline: none;
+}
+
+/* Checkbox i radiobutton */
+.form-check {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-check__input {
+  height: 1.05rem;
+  margin-top: 0.15rem;
+  width: 1.05rem;
+}
+
+.form-check__label {
+  font-size: 0.9rem;
+}
+
+/* Botons de formulari */
+.activity-form__submit {
+  margin-top: 0.5rem;
+  padding-inline: 1.75rem;
+}

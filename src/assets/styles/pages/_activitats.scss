@@ -1,0 +1,66 @@
+body.page-activitats {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+.page-main--activitats {
+  min-height: 100dvh; /* unitat dv: alçada en funció del viewport dinàmic */
+}
+
+/* Formulari + info */
+.activities-main {
+  padding-block: 3rem 4rem;
+}
+
+.activities-layout {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (width >= 900px) {
+  .activities-layout {
+    align-items: flex-start;
+    grid-template-columns: 2fr 1.1fr;
+  }
+}
+
+/* Targeta del formulari, amb cqw */
+.activity-form-card {
+  background-color: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 40px rgb(0 0 0 / 6%);
+  container-type: inline-size; /* necessari */
+  padding: clamp(1.5rem, 4cqw, 2.5rem); /* unitat cq: width del contenidor */
+}
+
+.activity-form-card__title {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.activity-form-card__intro {
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Info al lateral dret */
+.activity-info__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.activity-info__list {
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+.activity-info__list li + li {
+  margin-top: 0.4rem;
+}
+
+.activity-info__note {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}

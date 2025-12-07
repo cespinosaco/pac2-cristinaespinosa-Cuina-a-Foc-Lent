@@ -1,0 +1,67 @@
+body.page-participants {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+/* Container general */
+.page-main--participants {
+  padding-block: 4rem;
+}
+
+/* Títol */
+.participants__header h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+}
+
+/* Graella de participants */
+.participants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-inline: auto;
+
+  /* Limitem l'amplada total de la graella */
+  max-width: 80rem; /* Fem aquest ample perquè permeti exactament 3 targetes com es mostra al wireframe */
+}
+
+/* Targetes */
+.participant-card {
+  align-items: center;/* centra els elements no textuals */
+  display: flex;
+  flex: 0 0 22rem;
+  flex-direction: column;
+  text-align: center;/* centra el text */
+  width: 22rem; /* mida fixa per assegurar 3 targetes */
+}
+
+/* Tmatge */
+.participant-card__image {
+  aspect-ratio: 4 / 3;
+  border-radius: 0.75rem;
+  margin-bottom: 1.25rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Nom */
+.participant-card__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Descripció */
+.participant-card__desc {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+/* Container query per fer-les més amples si hi ha espai */
+@container (min-width: 60rem) {
+  .participant-card {
+    max-width: 20rem;
+  }
+}

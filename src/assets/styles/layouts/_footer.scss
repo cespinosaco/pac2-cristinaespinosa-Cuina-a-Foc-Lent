@@ -1,0 +1,39 @@
+/* ----- FOOTER ----- */
+
+.site-footer {
+  background-color: $color-secondary;
+  color: #f5e8dd;
+  font-size: 0.95rem;
+  padding-block: 2.5rem;
+
+  a {
+    color: #f5e8dd;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  i {
+    margin-right: 0.4rem;
+    opacity: 0.9;
+  }
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.site-footer__brand {
+  font-weight: 500;
+  margin: 0;
+}
+
+.site-footer__info,
+.site-footer__contact {
+  margin: 0;
+}

@@ -1,0 +1,28 @@
+@layer bootstrap, reset, base, layouts, components, pages;
+@import "base/variables";
+
+@layer bootstrap {
+  @import "bootstrap/scss/bootstrap";
+}
+
+@layer base {
+  @import "base/reset";
+}
+
+@layer layouts {
+  @import "layouts/header";
+  @import "layouts/footer";
+}
+
+@layer components {
+  @import "components/buttons";
+  @import "components/forms";
+  @import "components/hero";
+}
+
+@layer pages {
+  @import "pages/index";
+  @import "pages/participants";
+  @import "pages/jornades";
+  @import "pages/activitats";
+}

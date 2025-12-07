@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Activitats</title>
+  </head>
+  <body class="page-index">
+    <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/src/index.html">
+        <img src="/src/assets/images/logo-cuina.png" alt="Cuina a Foc Lent" class="nav-logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Canvia la navegació">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/src/index.html">Inici</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/src/participants.html">Ponents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/src/jornades.html">Les jornades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/src/activitats.html">Activitats</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  <main class="page-main page-main--activitats" data-aos="fade-up">
+  <!-- HERO INTRO -->
+  <header class="hero hero--fullimage hero--activitats">
+  <figure class="hero__figure">
+    <img
+      src="/src/assets/images/hero-activitats.jpg"
+      alt="Chef emplatant un menjar"
+    />
+  </figure>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow">Inscripcions obertes</p>
+    <h1 class="hero__title">Activitats de Cuina a Foc Lent</h1>
+    <p class="hero__subtitle">
+      Tria els tallers i tastos que més t’interessen.
+    </p>
+  </div>
+</header>
+
+  <!-- FORM + INFO -->
+  <section class="activities-main container">
+    <div class="activities-layout">
+      <!-- FORMULARI -->
+      <section class="activity-form-card">
+        <h2 class="activity-form-card__title">Formulari d’inscripció</h2>
+        <p class="activity-form-card__intro">
+          Les activitats són gratuïtes però amb aforament limitat. Omple el formulari i t’enviem
+          la confirmació per correu electrònic.
+        </p>
+
+        <form
+          class="activity-form"
+          name="inscripcions-activitats"
+          method="POST"
+          data-netlify="true"
+        >
+          <div class="form-group">
+            <label class="form-label" for="nom">Nom i cognoms</label>
+            <input class="form-control" type="text" id="nom" name="nom" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Correu electrònic</label>
+            <input class="form-control" type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dia">Dia preferent</label>
+            <select class="form-control" id="dia" name="dia" required>
+              <option value="">Tria una opció</option>
+              <option value="divendres">Divendres</option>
+              <option value="dissabte">Dissabte</option>
+              <option value="diumenge">Diumenge</option>
+            </select>
+          </div>
+
+          <fieldset class="form-group">
+            <legend class="form-label">Activitats que t’interessen</legend>
+
+            <div class="form-check">
+              <input
+                class="form-check__input"
+                type="checkbox"
+                id="taller-cassola"
+                name="activitats"
+                value="taller-cassola"
+              />
+              <label class="form-check__label" for="taller-cassola">
+                Taller de cuina de cassola
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check__input"
+                type="checkbox"
+                id="taller-postres"
+                name="activitats"
+                value="taller-postres"
+              />
+              <label class="form-check__label" for="taller-postres">
+                Postres de tota la vida
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check__input"
+                type="checkbox"
+                id="tast-producte"
+                name="activitats"
+                value="tast-producte"
+              />
+              <label class="form-check__label" for="tast-producte">
+                Tast de producte de proximitat
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label class="form-label" for="comentaris">Comentaris o necessitats especials</label>
+            <textarea
+              class="form-control"
+              id="comentaris"
+              name="comentaris"
+              rows="4"
+              placeholder="Al·lèrgies, intoleràncies, mobilitat, etc."
+            ></textarea>
+          </div>
+
+          <div class="form-group form-group--inline">
+            <div class="form-check">
+              <input
+                class="form-check__input"
+                type="checkbox"
+                id="accepto"
+                name="accepto"
+                required
+              />
+              <label class="form-check__label" for="accepto">
+                Accepto la política de privacitat i el tractament de dades.
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary activity-form__submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            Enviar inscripció
+          </button>
+        </form>
+      </section>
+
+      <!-- COLUMNA INFO -->
+      <aside class="activity-info">
+        <h2 class="activity-info__title">Informació pràctica</h2>
+        <ul class="activity-info__list">
+          <li><strong>Lloc:</strong> Centre Cívic X</li>
+          <li><strong>Dates:</strong> 12–14 d’abril</li>
+          <li><strong>Preu:</strong> activitats gratuïtes amb inscripció prèvia</li>
+          <li><strong>Places:</strong> limitades per garantir el caràcter pràctic dels tallers</li>
+        </ul>
+
+        <p class="activity-info__note">
+          Si tens qualsevol dubte, pots escriure a
+          <a href="mailto:info@cuinaafoclent.cat">info@cuinaafoclent.cat</a> i t’ajudarem.
+        </p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <p class="site-footer__brand">
+      Jornades <strong>Cuina a Foc Lent</strong> · Organitza l'Ajuntament de Castelldefels i AVIVA
+    </p>
+
+    <p class="site-footer__info">
+      <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+      Centre Cívic de Castelldefels · 12–14 d’abril
+    </p>
+
+    <p class="site-footer__contact">
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      <a href="mailto:info@cuinaafoclent.cat">info@cuinaafoclent.cat</a>
+    </p>
+
+  </div>
+</footer>
+    <script type="module" src="/src/assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

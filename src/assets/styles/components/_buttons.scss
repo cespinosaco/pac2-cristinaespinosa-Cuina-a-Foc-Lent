@@ -1,0 +1,7 @@
+.poster__cta {
+  background-color: $primary;
+
+  &:hover {
+    background-color: darken($primary, 8%);   // funció sass
+  }
+}
